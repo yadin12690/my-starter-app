@@ -1,4 +1,4 @@
-import Pokedex from './components/Pekedex'
+import Pokedex from './components/Pokedex'
 
 function App() {
 
