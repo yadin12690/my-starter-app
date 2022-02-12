@@ -1,3 +1,4 @@
+import React from 'react'
 import { useState } from 'react'
 import './Pokedex.css'
 import pokemonData from './pokemonData'
@@ -5,7 +6,7 @@ import pokemonData from './pokemonData'
 function Pokedex() {
 
     const [pokemonDataState, setPokemonDataState] = useState(pokemonData);
-    const [indexToRender, setIndexToRender] = useState<number>(0);
+    const [indexToRender, setIndexToRender] = useState<number>(40);
     const dataLengthToLoad: number = 42;
 
     const handleBack = () => {
@@ -13,7 +14,9 @@ function Pokedex() {
     };
 
     const handleNext = () => {
-        if (indexToRender < dataLengthToLoad) setIndexToRender(indexToRender + 1);
+        if (indexToRender + 1 === dataLengthToLoad) setIndexToRender(0);
+        else if (indexToRender < dataLengthToLoad) setIndexToRender(indexToRender + 1);
+
     };
 
     return (
@@ -103,7 +106,20 @@ function Pokedex() {
                 </div>
                 <div id="pokedex-right">
                     <div id="screen-description-row">
-                        <div id="screen-description"></div>
+                        <div id="screen-description">Created by Yadin Yafe 2022.<img className="pokedoreBall" src="src\assets\pokedor.ico"></img></div>
+                    </div>
+
+                    <div id="numbers-buttons-row">
+                        <div id="button-0" className="number-button">0</div>
+                        <div id="button-1" className="number-button">1</div>
+                        <div id="button-2" className="number-button">2</div>
+                        <div id="button-3" className="number-button">3</div>
+                        <div id="button-4" className="number-button">4</div>
+                        <div id="button-5" className="number-button">5</div>
+                        <div id="button-6" className="number-button">6</div>
+                        <div id="button-7" className="number-button">7</div>
+                        <div id="button-8" className="number-button">8</div>
+                        <div id="button-9" className="number-button">9</div>
                     </div>
 
                     <div id="decoration-buttons">
@@ -122,8 +138,8 @@ function Pokedex() {
                         <div id="deco-light"></div>
                     </div>
                     <div id="extra-info-pokemon-row">
-                        <div className="extra-info-screen" id="extra-info-screen-1">Height: 7</div>
-                        <div className="extra-info-screen" id="extra-info-screen-2">Weight: 69</div>
+                        <div className="extra-info-screen" id="extra-info-screen-1">Height: {pokemonDataState[indexToRender].height}</div>
+                        <div className="extra-info-screen" id="extra-info-screen-2">Weight: {pokemonDataState[indexToRender].weight}</div>
                     </div>
                 </div>
                 <svg id="mid-cilinder" width="54" height="456" viewBox="0 0 54 456" fill="none" xmlns="http://www.w3.org/2000/svg">
