@@ -4,9 +4,7 @@ import './Pokedex.css'
 import pokemonData from './pokemonData'
 
 function Pokedex() {
-
-    const [pokemonDataState, setPokemonDataState] = useState(pokemonData);
-    const [indexToRender, setIndexToRender] = useState<number>(40);
+    const [indexToRender, setIndexToRender] = useState<number>(0);
     const dataLengthToLoad: number = 42;
 
     const handleBack = () => {
@@ -16,7 +14,6 @@ function Pokedex() {
     const handleNext = () => {
         if (indexToRender + 1 === dataLengthToLoad) setIndexToRender(0);
         else if (indexToRender < dataLengthToLoad) setIndexToRender(indexToRender + 1);
-
     };
 
     return (
@@ -45,7 +42,7 @@ function Pokedex() {
                             </div>
                             <div id="screen">
                                 <div id="picture-row">
-                                    <img id="picture" src={pokemonDataState[indexToRender].image} />
+                                    <img id="picture" src={pokemonData[indexToRender].image} />
                                 </div>
                                 <div id="screen-row-info">
                                     <div id="number-pokemon">00{indexToRender + 1}</div>
@@ -72,7 +69,7 @@ function Pokedex() {
                     <div id="name-row">
                         <div id="name-container">
                             <div id="name-screen">
-                                {pokemonDataState[indexToRender].name}
+                                {pokemonData[indexToRender].name}
                             </div>
                             <div id="buttons-container">
                                 <div id="button-red">
@@ -138,8 +135,8 @@ function Pokedex() {
                         <div id="deco-light"></div>
                     </div>
                     <div id="extra-info-pokemon-row">
-                        <div className="extra-info-screen" id="extra-info-screen-1">Height: {pokemonDataState[indexToRender].height}</div>
-                        <div className="extra-info-screen" id="extra-info-screen-2">Weight: {pokemonDataState[indexToRender].weight}</div>
+                        <div className="extra-info-screen" id="extra-info-screen-1">Height: {pokemonData[indexToRender].height}</div>
+                        <div className="extra-info-screen" id="extra-info-screen-2">Weight: {pokemonData[indexToRender].weight}</div>
                     </div>
                 </div>
                 <svg id="mid-cilinder" width="54" height="456" viewBox="0 0 54 456" fill="none" xmlns="http://www.w3.org/2000/svg">

@@ -71,8 +71,8 @@ export default [{
     "name": "blastoise",
     "url": "https://pokeapi.co/api/v2/pokemon/9/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/9.png",
-    "height": "15",
-    "weight": "55"
+    "height": "45",
+    "weight": "75"
 },
 {
     "number": 10,
@@ -80,15 +80,15 @@ export default [{
     "url": "https://pokeapi.co/api/v2/pokemon/10/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/10.png",
     "height": "15",
-    "weight": "55"
+    "weight": "15"
 },
 {
     "number": 11,
     "name": "metapod",
     "url": "https://pokeapi.co/api/v2/pokemon/11/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/11.png",
-    "height": "15",
-    "weight": "55"
+    "height": "25",
+    "weight": "62"
 },
 {
     "number": 12,
@@ -96,15 +96,15 @@ export default [{
     "url": "https://pokeapi.co/api/v2/pokemon/12/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/12.png",
     "height": "15",
-    "weight": "55"
+    "weight": "30"
 },
 {
     "number": 13,
     "name": "weedle",
     "url": "https://pokeapi.co/api/v2/pokemon/13/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/13.png",
-    "height": "15",
-    "weight": "55"
+    "height": "10",
+    "weight": "22"
 },
 {
     "number": 14,
@@ -112,15 +112,15 @@ export default [{
     "url": "https://pokeapi.co/api/v2/pokemon/14/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/14.png",
     "height": "15",
-    "weight": "55"
+    "weight": "35"
 },
 {
     "number": 15,
     "name": "beedrill",
     "url": "https://pokeapi.co/api/v2/pokemon/15/",
     "image": "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/15.png",
-    "height": "15",
-    "weight": "55"
+    "height": "5",
+    "weight": "25"
 },
 {
     "number": 16,
