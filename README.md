@@ -1,4 +1,4 @@
-# okedex-react
+# pokedex-react
 
 React Pokedex project include TypeScript, Vite.js, Jest
 
