@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import './Pokedex.css'
 import pokemonData from './pokemonData'
+import Tooltip from '@mui/material/Tooltip';
 
 function Pokedex() {
     const [indexToRender, setIndexToRender] = useState<number>(0);
@@ -14,6 +15,10 @@ function Pokedex() {
     const handleNext = () => {
         if (indexToRender + 1 === dataLengthToLoad) setIndexToRender(0);
         else if (indexToRender < dataLengthToLoad) setIndexToRender(indexToRender + 1);
+    };
+
+    const handleSearchPokemon = () => {
+        console.log('Searching...');
     };
 
     return (
@@ -104,6 +109,7 @@ function Pokedex() {
                 <div id="pokedex-right">
                     <div id="screen-description-row">
                         <div id="screen-description">Created by Yadin Yafe 2022.<img className="pokedoreBall" src="src\assets\pokedor.ico"></img></div>
+                        <div id="screen-description">Type pokemon number below</div>
                     </div>
 
                     <div id="numbers-buttons-row">
@@ -132,7 +138,9 @@ function Pokedex() {
                                 <img id="type2" className="type-pokemon" src="https://cdn2.bulbagarden.net/upload/3/3d/PoisonIC_Big.png" />
                             </div>
                         </div>
-                        <div id="deco-light"></div>
+                        <Tooltip title={'Search pokemon'}>
+                            <div id="deco-light" onClick={() => handleSearchPokemon()}></div>
+                        </Tooltip>
                     </div>
                     <div id="extra-info-pokemon-row">
                         <div className="extra-info-screen" id="extra-info-screen-1">Height: {pokemonData[indexToRender].height}</div>
