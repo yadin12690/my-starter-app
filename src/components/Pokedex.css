@@ -35,6 +35,12 @@ select {
   justify-content: center;
 }
 
+.pokedoreBall {
+  display: block;
+  position: relative;
+  left: 50%;
+}
+
 #pokedex {
   display: flex;
   align-items: flex-end;
@@ -599,6 +605,7 @@ div#botcross:active div#downT {
   font-size: 25px;
   color: #EAEAEA;
   padding: 5px;
+  text-shadow: 1px 2px 15px #20c311;
   overflow-y: auto;
 }
 
@@ -718,6 +725,7 @@ div#botcross:active div#downT {
   border: 2px solid #000000;
   font-family: 'VT323', monospace;
   font-size: 28px;
+  text-shadow: 1px 2px 15px #20c311;
   color: #EAEAEA;
   padding-top: 20px;
   padding-left: 5px;
